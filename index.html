@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap-5.3.3/css/bootstrap.css">
+    <script src="assets/bootstrap-5.3.3/js/bootstrap.js"></script>
+    <title>Sieve</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+
+        @font-face {
+            font-family: Circular std;
+            src: url(assets/images/circular-std-medium-500.ttf);
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            background-image:  url(assets/images/Background\ pattern.png), url(assets/images/099.png), url(assets/images/100.jpeg);
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-position: center center, center center, center center;
+            background-size: contain, cover, cover;
+            /* background-attachment: fixed; */
+            background-blend-mode: normal;
+            font-family: "Host Grotesk", serif;
+            position: relative;
+            z-index: 99;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .6);
+            z-index: 1;
+        }
+        .laptop {
+            
+            height: 100%;
+        }
+        .logo {
+            height: 60px;
+        }
+        .laptop-img {
+            width:100%;
+            height:auto;
+        }
+        .gif {
+            width: 80%;
+            height: auto;
+            left: 50%;
+            top: 33%;
+            transform: translate(-50%, -50%);
+        }
+        button {
+            background: #0DFFB6;
+        }
+        .coming-soon {
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 51.99px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            letter-spacing: -0.04em;
+            color: rgba(255, 255, 255, 0.385);
+        }
+        .box {
+            bottom: -20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: auto;
+        }
+        h2 {
+            font-size: 32px;
+            line-height: 45.44px;
+            margin: 0 auto;
+        }
+        #countdown {
+            color: #0DFFB6;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18.46px;
+        }
+        .line {
+            bottom: -70px;
+            right: 60px;
+            transform: translate(-50%, -50%);
+            width: 100px;
+        }
+        .main-text p {
+            font-size: 14px;
+            margin-top: 19.88px;
+        }
+        @media only screen and (min-width: 992px) {
+            .laptop-img {
+                width: 570px;
+                height: 300px;
+            }
+            .gif {
+                width: 455px;
+               height: 230px;
+                left: 50%;
+                top: 43%;
+                transform: translate(-50%, -50%);
+            }
+            h2 {
+                font-size: 56px;
+                font-weight: 500;
+                line-height: 76.52px;
+                letter-spacing: -0.04em;
+                max-width: 1400px;
+            }
+            .main-text p {
+                font-size: 18px;
+                font-weight: 450;
+                line-height: 35.3px;
+                text-align: center;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            .coming-soon {
+                font-size: 100px;
+                font-weight: 500;
+                line-height: 141.99px;
+                letter-spacing: -0.04em;
+                color: rgba(255, 255, 255, 0.385);
+            }
+            #countdown {
+                color: #0DFFB6;
+                font-size: 20px;
+                font-weight: 450;
+                line-height: 25.3px;
+            }
+            .line {
+                bottom: -100px;
+                right: 90px;
+                transform: translate(-50%, -50%);
+                width: auto;
+            }
+            .footer {
+                position: sticky;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container pb-5 position-relative" style="z-index: 99;">
+        <div class="d-flex justify-content-start gap-3 align-items-center flex-column">
+            <div class="pt-5">
+                <img src="assets/images/Sieve 200px 1.svg" alt class="logo">
+            </div>
+            <div class="text-center text-light main-text mb-2 mb-md-3 position-relative">
+                <h2 class="mb-3">Hire fast, ship faster.</h2>
+                <p class="mb-0">A platform that addresses the challenge of matching skilled professionals with clients seeking intermittent services in an equitable manner.</p>
+                <img src="assets/images/Vector 14.svg" alt class="position-absolute line d-none d-md-block">
+            </div>
+            <div class="d-flex gap-2 justify-content-center align-items-center mb-3">
+                <img src="assets/images/timer.svg" alt>
+                <p id="countdown" class="mb-0">Launching in 48d : 24h : 10m : 45s</p>
+            </div>
+            <div class="laptop position-relative">
+                <img src="assets/images/Macbook Air M2 Silver 1.png" alt class="laptop-img">
+                <img src="assets/images/1000174605.gif" alt class="position-absolute gif">
+                <img src="assets/images/Frame 1000002844.png" alt class="position-absolute box">
+            </div>
+            <div class="coming-soon">
+                Coming Soon!
+            </div>
+        </div>
+    </div>
+    <div class="w-100 text-light py-2 py-md-4 bg-dark footer d-none d-md-block" style="bottom: 0; z-index:999">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 container">
+            <div class="d-flex gap-2 align-itemss-center">
+                <div>
+                    <img src="assets/images/directbox-notif.svg" alt width="22" height="22">
+                </div>
+                <p class="mb-0">contact@sieveset.com</p>        
+            </div>
+            <button class="border-0 py-2 px-3 rounded-5">Join Our Waitlist</button>
+            <div class="d-flex gap-2 align-items-center">
+                <!-- <span>Connect</span> -->
+                <a href=""><img src="assets/images/Facebook.svg" alt=""></a>
+                <a href=""><img src="assets/images/Linkedin.svg" alt=""></a>
+                <a href=""><img src="assets/images/Twitter.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 text-light py-3 py-md-4 bg-dark footer d-block d-md-none position-relative" style="bottom: 0; z-index:999">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 container">
+            <button class="border-0 py-2 px-3 rounded-5">Join Our Waitlist</button>
+            <div class="d-flex gap-2 align-itemss-center">
+                <div>
+                    <img src="assets/images/directbox-notif.svg" alt width="22" height="22">
+                </div>
+                <p class="mb-0">contact@sieveset.com</p>        
+            </div>
+            <div class="d-flex gap-2 align-items-center">
+                <!-- <span>Connect</span> -->
+                <a href=""><img src="assets/images/Facebook.svg" alt=""></a>
+                <a href=""><img src="assets/images/Linkedin.svg" alt=""></a>
+                <a href=""><img src="assets/images/Twitter.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Target date and time (edit to match your desired launch date)
+        const targetDate = new Date("2025-03-20T23:59:59");
+      
+        function updateCountdown() {
+          const now = new Date();
+          const timeDifference = targetDate - now;
+      
+          // Calculate days, hours, minutes, and seconds
+          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+      
+          // Update the countdown text
+          const countdownText = `Launching in ${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+          document.getElementById("countdown").textContent = countdownText;
+      
+          // Stop countdown at zero
+          if (timeDifference < 0) {
+            document.getElementById("countdown").textContent = "Launched!";
+            clearInterval(timer);
+          }
+        }
+      
+        // Update every second
+        const timer = setInterval(updateCountdown, 1000);
+      
+        // Initial call to avoid delay
+        updateCountdown();
+    </script>
+</body>
+</html>
