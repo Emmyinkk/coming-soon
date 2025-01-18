@@ -47,13 +47,14 @@
         }
         .laptop-img {
             width:100%;
-            height:auto;
+            height: 250px;
         }
         .gif {
             width: 80%;
-            height: auto;
+            height: 200px;
+            max-height: 300px;
             left: 50%;
-            top: 33%;
+            top: 45%;
             transform: translate(-50%, -50%);
         }
         button {
@@ -69,10 +70,10 @@
             color: rgba(255, 255, 255, 0.385);
         }
         .box {
-            bottom: -20%;
+            bottom: -40px;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 70%;
+            width: 60%;
             height: auto;
         }
         h2 {
@@ -95,6 +96,28 @@
         .main-text p {
             font-size: 14px;
             margin-top: 19.88px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .hour-glass {
+            animation: rotateImage 5s linear infinite;
+        }
+        @keyframes rotateImage {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(180deg); /* First 180° rotation */
+            }
+            50% {
+                transform: rotate(180deg); /* Pause at 180° */
+            }
+            75% {
+                transform: rotate(360deg); /* Second 180° rotation */
+            }
+            100% {
+                transform: rotate(360deg); /* Pause at 360° */
+            }
         }
         @media only screen and (min-width: 992px) {
             .logo {
@@ -107,10 +130,10 @@
                 height: 350px;
             }
             .gif {
-                width: 455px;
-               height: 230px;
+                width: 80%;
+                height: 295px;
                 left: 50%;
-                top: 43%;
+                top: 46%;
                 transform: translate(-50%, -50%);
             }
             h2 {
@@ -118,7 +141,7 @@
                 font-weight: 500;
                 line-height: 76.52px;
                 letter-spacing: -0.04em;
-                max-width: 1400px;
+                max-width: 900px;
             }
             .main-text p {
                 font-size: 18px;
@@ -143,7 +166,7 @@
             }
             .line {
                 bottom: -100px;
-                right: 90px;
+                right: -90px;
                 transform: translate(-50%, -50%);
                 width: auto;
             }
@@ -161,7 +184,7 @@
     <div class="container pb-5 position-relative" style="z-index: 99;">
         <div class="d-flex justify-content-start gap-3 align-items-center flex-column">
             <div class="pt-5">
-                <img src="assets/images/Sieve 200px 1.svg" alt class="logo">
+                <img src="assets/images/logo.png" alt class="logo">
             </div>
             <div class="text-center text-light main-text mb-2 mb-md-3 position-relative">
                 <h2 class="mb-3">Talents are statistically assessed democratically, bypassing recruiters.</h2>
@@ -169,12 +192,12 @@
                 <img src="assets/images/Vector 14.svg" alt class="position-absolute line d-none d-md-block">
             </div>
             <div class="d-flex gap-2 justify-content-center align-items-center mb-3">
-                <img src="assets/images/timer.svg" alt>
+                <img src="assets/images/timer.svg" alt class="hour-glass">
                 <p id="countdown" class="mb-0">Launching in 48d : 24h : 10m : 45s</p>
             </div>
             <div class="laptop position-relative">
                 <img src="assets/images/Macbook Air M2 Silver 1.png" alt class="laptop-img">
-                <img src="assets/images/1000174605.gif" alt class="position-absolute gif">
+                <img src="assets/images/gif.gif" alt class="position-absolute gif">
                 <img src="assets/images/Frame 1000002844.png" alt class="position-absolute box">
             </div>
             <div class="coming-soon">
@@ -182,7 +205,7 @@
             </div>
         </div>
     </div>
-    <div class="w-100 text-light py-2 py-md-3 bg-dark footer d-none d-md-block" style="bottom: 0; z-index:999">
+    <div class="w-100 text-light py-2 py-md-3 bg-dark footer d-none d-md-block position-sticky" style="bottom: 0; z-index:9999">
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 container">
             <div class="d-flex gap-2 align-itemss-center">
                 <div>
@@ -192,7 +215,7 @@
             </div>
             <button class="border-0 py-3 px-5 rounded-5">Join Our Waitlist</button>
             <div class="d-flex gap-2 align-items-center">
-                <!-- <span>Connect</span> -->
+                <span>Connect  </span>
                 <a href=""><img src="assets/images/Facebook.svg" alt=""></a>
                 <a href=""><img src="assets/images/Linkedin.svg" alt=""></a>
                 <a href=""><img src="assets/images/Twitter.svg" alt=""></a>
